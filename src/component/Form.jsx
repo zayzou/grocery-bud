@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const Form = () => {
+const Form = ({ addItem }) => {
   const [item, setItem] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!item){
-        console.error("item must not be null");
-        return;
+    if (!item) {
+      console.error("item must not be null");
+      return;
     }
-    console.log(item);
+    addItem(item);
   };
   return (
     <form action="" onSubmit={handleSubmit}>
