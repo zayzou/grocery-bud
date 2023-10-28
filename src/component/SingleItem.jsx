@@ -9,7 +9,7 @@ const SingleItem = ({ id, name, completed, removeItem }) => {
   return (
     <div className="single-item">
       <input type="checkbox" checked={isChecked} onChange={handleIsChecked} />
-      <p style={{ textDecoration: isChecked ? "line-through" : "" }}>{name}</p>
+      <p className={isChecked ? "done" : ""}>{name}</p>
       <button className="btn remove-btn" onClick={() => removeItem(id)}>
         Delete
       </button>
