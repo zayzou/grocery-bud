@@ -9,10 +9,13 @@ const App = () => {
     const newItem = { id: nanoid(), name: name, completed: false };
     setItems([...items, newItem]);
   };
+  const removeItem = (id) => {
+    setItems(items.filter((item) => item.id !== id));
+  };
   return (
     <section className="section-center">
       <Form addItem={addItem} />
-      <Items items={items} />
+      <Items items={items} removeItem={removeItem} />
     </section>
   );
 };
