@@ -10,6 +10,7 @@ const Form = ({ addItem }) => {
       return;
     }
     addItem(item);
+    setItem("");
   };
   return (
     <form action="" onSubmit={handleSubmit}>
