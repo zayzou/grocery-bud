@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 const SingleItem = ({ id, name, completed, removeItem, handleCompleted }) => {
+  
+  //todo remove the commented  text
   // const [isChecked, setIsChecked] = useState(completed);
   // const handleIsChecked = () => {
   //   setIsChecked(!isChecked);
