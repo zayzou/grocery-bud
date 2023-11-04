@@ -1,19 +1,29 @@
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 const Form = ({ addItem }) => {
   const [item, setItem] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!item) {
-      console.error("item must not be null");
+      toast.error("🦄 Name cannot be empty!", {
+        position: "top-center",
+        autoClose: 3000,
+      });
       return;
     }
     addItem(item);
     setItem("");
+    toast.success("🦄 Item added successfully", {
+      position: "top-center",
+      autoClose: 3000,
+    });
   };
   return (
     <form action="" onSubmit={handleSubmit}>
+      <ToastContainer />
       <h4>Grocery Bud</h4>
       <div className="form-control">
         <input
