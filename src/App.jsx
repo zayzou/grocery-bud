@@ -12,27 +12,28 @@ const App = () => {
     setItems(updatedItems);
     localStorage.setItem("items", JSON.stringify(updatedItems));
   };
-
   const removeItem = (id) => {
     setItems(items.filter((item) => item.id !== id));
   };
 
-  const handleCompleted = (id) => {
-    console.log(id);
+  const editItems = (id) => {
     const newItems = items.map((item) => {
-      if(item.id == id){
-        console.log(item.name);
-        item.completed = !item.completed
+      if (item.id === id) {
+        return { ...item, completed: !item.completed };
       }
+      return item;
     });
+    setItems(newItems)
+
   };
+
   return (
     <section className="section-center">
       <Form addItem={addItem} />
       <Items
         items={items}
         removeItem={removeItem}
-        handleCompleted={handleCompleted}
+        handleCompleted={editItems}
       />
     </section>
   );
