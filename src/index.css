@@ -320,3 +320,11 @@ form h4 {
   text-decoration: line-through;
   color: var(--grey-500);
 }
+.logo{
+  font-family: chalkboard;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.logo span{
+  color: yellow;
+}

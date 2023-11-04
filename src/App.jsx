@@ -29,6 +29,7 @@ const App = () => {
 
   return (
     <section className="section-center">
+
       <Form addItem={addItem} />
       <Items
         items={items}

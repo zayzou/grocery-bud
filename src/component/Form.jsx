@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
 const Form = ({ addItem }) => {
   const [item, setItem] = useState("");
@@ -24,7 +23,10 @@ const Form = ({ addItem }) => {
   return (
     <form action="" onSubmit={handleSubmit}>
       <ToastContainer />
-      <h4>Grocery Bud</h4>
+      <h4 className="logo">
+        Grocery
+        <span>Bud</span>
+      </h4>
       <div className="form-control">
         <input
           type="text"
