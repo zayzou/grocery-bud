@@ -1,7 +1,7 @@
 import React from "react";
 import SingleItem from "./SingleItem";
 
-const Items = ({ items, removeItem, handleCompleted }) => {
+const Items = ({ items, removeItem, editItems }) => {
   return (
     <div className="items">
       {items.map((item) => (
@@ -9,7 +9,7 @@ const Items = ({ items, removeItem, handleCompleted }) => {
           key={item.id}
           {...item}
           removeItem={removeItem}
-          handleCompleted={handleCompleted}
+          editItems={editItems}
         />
       ))}
     </div>

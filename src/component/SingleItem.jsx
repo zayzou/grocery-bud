@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SingleItem = ({ id, name, completed, removeItem, handleCompleted }) => {
+const SingleItem = ({ id, name, completed, removeItem, editItems }) => {
 
 
   return (
@@ -8,7 +8,7 @@ const SingleItem = ({ id, name, completed, removeItem, handleCompleted }) => {
       <input
         type="checkbox"
         checked={completed}
-        onChange={() => handleCompleted(id)}
+        onChange={() => editItems(id)}
       />
 
       <p className={completed ? "done" : ""}>{name}</p>

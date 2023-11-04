@@ -33,7 +33,7 @@ const App = () => {
       <Items
         items={items}
         removeItem={removeItem}
-        handleCompleted={editItems}
+        editItems={editItems}
       />
     </section>
   );
