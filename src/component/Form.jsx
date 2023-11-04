@@ -24,7 +24,7 @@ const Form = ({ addItem }) => {
     <form action="" onSubmit={handleSubmit}>
       <ToastContainer />
       <h4 className="logo">
-        Grocery
+        Grocery 
         <span>Bud</span>
       </h4>
       <div className="form-control">
